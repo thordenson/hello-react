@@ -11,10 +11,29 @@
 //jqHello.appendTo('[data-root]');
 
 //React Version 
-let hello = React.createElement('h1', null, 'hello react!');
+const h = React.createElement;
+
+let kebabs = [
+    'chickenhearts',
+    'marinated mushrooms',
+    'beef'
+];
+
+let items = kababs.map((k) => {
+    let virtualItems = React.createElement('li', null, k);
+    return virtualItems; 
+
+});
+
+let title = React.createElement('h1', null, 'hello react!');
 let item = React.createElement('li', null, 'chicken hearts');
-let list = React.createElement('ul', null, item);
+let item2 = React.createElement('li', null, 'marinated mushrooms');
+let list = React.createElement('ul', null, itmes);
 
-let main = React.createElement('div', null, 
 
-ReactDOM.render(hello, document.querySelecter('[data-root]')); 
+let main = React.createElement('div', null, [
+    title,
+    list
+]);
+
+ReactDOM.render(main, document.querySelecter('[data-root]')); 
